@@ -1,0 +1,54 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Elec Stopwatch</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="sky" id="sky" aria-hidden="true">
+    <div class="stars" id="stars"></div>
+    <div class="moonwash" id="moonwash"></div>
+    <div class="fireworks" id="fireworks"></div>
+    <div class="haze"></div>
+    <div class="ground"></div>
+  </div>
+
+  <main class="ui">
+    <header class="header">
+      <div class="brand">
+        <!-- optional branding -->
+        <!-- <div class="brand__title">Elec Stopwatch</div>
+        <div class="brand__sub">Time Stop + Fireworks</div> -->
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="display" id="display" aria-label="Stopwatch time">00:00.00</div>
+
+      <div class="controls">
+        <button class="btn primary" id="startBtn" type="button">Start</button>
+        <button class="btn" id="stopBtn" type="button">Stop</button>
+        <button class="btn danger" id="resetBtn" type="button">Reset</button>
+         <button class="btn" id="lapBtn" type="button" disabled>Lap</button>
+        
+      </div>
+
+      <!-- NEW -->
+      <section class="laps" aria-label="Lap times">
+        <div class="laps__head">
+          <div class="laps__title">Laps</div>
+          <button class="chip" id="clearLapsBtn" type="button" disabled>Clear</button>
+        </div>
+        <div class="laps__list" id="laps" role="list" aria-live="polite"></div>
+      </section>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
